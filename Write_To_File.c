@@ -13,7 +13,7 @@ while(1)
 scanf("%s",words);
 fprintf(fp,"%s\n",words);
 fflush(fp);//immediatelyy write to file
-}
+} 
 
 fclose(fp);
 return 0;
