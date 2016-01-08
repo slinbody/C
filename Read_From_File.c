@@ -5,7 +5,6 @@ int main()
 
 FILE *fp;
 char words[80];
-char c;
 int line=1,score1,score2;
 
 fp=fopen("/root/c/score.txt","r+");
