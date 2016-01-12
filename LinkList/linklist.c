@@ -22,8 +22,9 @@ for(i=20;i<29;i++)
     s=enqueue_tail(s,i);
     //s=enqueue_head(s,i);
 
-for(i=0;i<2;i++)
-    dequeue_tail(s);
+for(i=0;i<6;i++)
+    //dequeue_tail(s);
+    s=dequeue_head(s);
 
 while(s!=NULL)
 {
@@ -76,4 +77,17 @@ void dequeue_tail(Node *s)
     }
     s->Ptr=NULL;
     free(tmp);
+}
+
+
+Node * dequeue_head(Node * s)
+{
+    Node *tmp;
+    if(s==NULL)
+        return NULL;
+
+    tmp=s;
+    s=tmp->Ptr;
+    free(tmp);
+    return s;
 }
