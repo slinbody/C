@@ -41,4 +41,4 @@ void enqueue(Node *s,int data)
     p->data = data;
     p->Ptr=NULL;
     s->Ptr=p;
-}
+} 
