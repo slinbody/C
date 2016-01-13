@@ -28,11 +28,7 @@ for(i=0;i<6;i++)
     //dequeue_tail(s);
     s=dequeue_head(s);
 
-while(s!=NULL)
-{
-    printf("%d\n",s->data);
-    s = s->Ptr;
-}
+print_list(s);
 
 return 0;
 } //end of main
