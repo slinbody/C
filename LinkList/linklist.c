@@ -12,6 +12,8 @@ Node * enqueue_tail(Node *s,int data);
 Node * enqueue_head(Node *s,int data);
 void dequeue_tail(Node *s);
 Node * dequeue_head(Node *s);
+Node * reverse_list(Node *s);
+void print_list(Node *s);
 
 int main()
 {
@@ -34,6 +36,31 @@ while(s!=NULL)
 
 return 0;
 } //end of main
+
+Node * reverse_list(Node *s)//反轉list
+{
+    Node *tmp1=s,*tmp2,*tmp3=NULL;
+    if(s=NULL)
+        return NULL;
+    while(tmp1 != NULL)
+    {
+        tmp2=tmp1->Ptr;
+        tmp1->Ptr=tmp3;
+        tmp3=tmp1;
+        tmp1=tmp2;
+    }
+    return tmp3;
+}
+
+void print_list(Node *s)//印出內容
+{
+    printf("This is HEAD!\n");
+    while(s!=NULL)
+    {
+        printf("%d\n",s->data);
+        s = s->Ptr;
+    }
+}
 
 Node * enqueue_tail(Node *s,int data)//從尾端插入
 {
