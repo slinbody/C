@@ -50,13 +50,17 @@ Node * reverse_list(Node *s)//反轉list
 
 void print_list(Node *s)//印出內容
 {
-    printf("This is HEAD!\n");
+    printf("The list as following: !\n");
     while(s!=NULL)
     {
-        printf("%d\n",s->data);
+        printf("%d",s->data);
         s = s->Ptr;
+        if(s!=NULL)
+        printf(" -> ");
     }
+    printf("\n");
 }
+
 
 Node * enqueue_tail(Node *s,int data)//從尾端插入
 {
