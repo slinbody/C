@@ -35,7 +35,7 @@ while(s!=NULL)
 return 0;
 } //end of main
 
-Node * enqueue_tail(Node *s,int data)
+Node * enqueue_tail(Node *s,int data)\\從尾端插入
 {
     Node *p=NULL,*tmp;
     p =(Node *)malloc(sizeof(Node));
@@ -54,7 +54,7 @@ Node * enqueue_tail(Node *s,int data)
     }
 }
 
-Node * enqueue_head(Node *s,int data)
+Node * enqueue_head(Node *s,int data)\\從前端插入
 {
     Node *p=NULL;
     p =(Node *)malloc(sizeof(Node));
@@ -63,7 +63,7 @@ Node * enqueue_head(Node *s,int data)
     return p;
 }
 
-void dequeue_tail(Node *s)
+void dequeue_tail(Node *s) \\從尾端刪除
 {
     Node *tmp;
     if(s==NULL)
@@ -80,7 +80,7 @@ void dequeue_tail(Node *s)
 }
 
 
-Node * dequeue_head(Node * s)
+Node * dequeue_head(Node * s) \\從頭刪除
 {
     Node *tmp;
     if(s==NULL)
