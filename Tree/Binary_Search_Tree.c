@@ -14,6 +14,7 @@ typedef struct node Node;
 Node * insert_tree(Node *s,int data, int level);
 void printf_in_order(Node *s);
 void printf_tree(Node *s);
+void find_Node(Node* S,int data);
 
 int main()
 {
@@ -40,6 +41,21 @@ printf_in_order(S);
 printf("\n");
 return 0;
 }//           end of main
+
+void find(Node* S,int data)
+{
+    if(S==NULL)
+        printf("Not FOUND!!\n");
+    else
+    {
+        if(S->data == data)
+            printf("%d is in tree\n",data);
+        else if(data > S->data)
+            find(S->right,data);
+        else
+            find(S->left,data);
+    }
+}
 
 Node * insert_tree(Node *s,int data,int level)
 {
