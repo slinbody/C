@@ -12,4 +12,4 @@ tree: tree.o main.o
         @echo $@" is generate."
 .PHONY : clean
 clean:
-        rm -f *.o tree
+        -rm -f *.o tree
