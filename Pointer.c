@@ -4,6 +4,13 @@
 int main()
 {
   char *atr[] = {"0a","1bc","2dick","3edison","4fgh"};
+/*
+*atr[0] = "0a"
+*atr[1] = "1bc" 
+*atr[2] = "2dick"
+*atr[3] = "3edison"
+*atr[4] = "4fgh"
+*/
 
   int num = 45 , *ptr , **ptr2ptr ;
   ptr     = &num;
